@@ -1,0 +1,44 @@
+\documentclass{report}
+
+% All package imports live in the ._styles file
+\usepackage{._styles}
+
+
+\begin{document}
+% Insert the title page here
+\subfile{._titlepage}
+\pagenumbering{roman}
+
+% Displays a list of \todo comments
+%remove this before submission
+%\listoftodos
+
+% Table of contents
+%\setcounter{tocdepth}{1}
+\tableofcontents
+%\listoftables
+%\lstlistoflistings
+
+\pagebreak
+
+% PARAGRAPH OPTIONS
+\setlength{\parindent}{0em}
+\setlength{\parskip}{.5em}
+
+% Import the files
+%\subfile{0_Abstract}
+
+%set multicolumn environment
+\subfile{1_Introduction}
+\subfile{2_TheoreticalBackground}
+\subfile{3_Applications}
+\subfile{4_MathematicalModel}
+\subfile{5_Conclusion}
+
+% Bibliography
+%\nocite{*} % print entire bibliography
+\listoffigures
+\bibliographystyle{ieeetr}
+\bibliography{ref}
+
+\end{document}
